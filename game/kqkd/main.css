@@ -1,0 +1,84 @@
+@import url(http://fonts.googleapis.com/css?family=Faster+One);
+
+body {
+	background-color: #e4e3f5;
+}
+a:link {
+    color: #CCFF00;
+}
+
+#Scroller {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 5000px;
+}
+
+#Content {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0px;
+	left: 0px;
+	color: #ff67ff;
+}
+
+#Content #Title {
+	margin-top: 10px;
+	color: #7e75ce;
+	width: 100%;
+	height: 40px;
+	font-size: 65px;
+	text-align: center;
+	font-family: 'Faster One', monospace;
+	letter-spacing: 0.3em;
+}
+
+@media (max-width: 400px) {
+
+  	#Content #Title {
+  		font-size: 32px;
+  	}
+
+  	#Jogger #Distance {
+  		top: 367px;
+  		left: 334px;
+  	}
+}
+
+#Content #SubTitle {
+	width: 100%;
+	height: 40px;
+	font-size: 20px;
+	text-align: center;
+}
+
+#Jogger #Distance {
+	position: absolute;
+	bottom: 2px;
+	right: 20%;
+	font-size: 20px;
+	font-family: Microsoft Yahei;
+	color: #a2daeb;
+}
+
+#footer {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	width: auto;
+	z-index: 20px;
+	color: white;
+	font-family: Microsoft Yahei;
+}
+
+#credits {
+	position: absolute;
+	bottom: 10px;
+	right: 10px;
+	width: auto;
+	z-index: 20px;
+	color: white;
+	font-family: monospace;	
+}

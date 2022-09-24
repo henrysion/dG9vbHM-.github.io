@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0" />
+    <title>兽语翻译 - RhythmStudio</title>
+
+    <!-- CSS  -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection" />
+</head>
+
+<body>
+    <nav class="light-blue lighten-1" role="navigation">
+        <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">兽语翻译</a>
+        </div>
+    </nav>
+    <div class="section no-pad-bot" id="index-banner">
+        <div class="container">
+            <br><br>
+            <h4 class="black-text">使用方式</h4>
+            <h5 class="col light">
+                兽语翻译采用4个字典字符来作为加密的后的字典，首先根据需求更改字典。
+            </h5><br>
+
+            <h4 class="black-text">字典</h4>
+            <div style="height:500px;">
+
+                <div class="row">
+
+                    <div class="input-field col s3">
+                        <input value="嗷" id="main1" type="text" class="validate" length="1">
+                        <label for="main1">字典1</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <input value="呜" id="main2" type="text" class="validate" length="1">
+                        <label for="main2">字典2</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <input value="啊" id="main3" type="text" class="validate" length="1">
+                        <label for="main3">字典3</label>
+                    </div>
+
+                    <div class="input-field col s3">
+                        <input value="~" id="main4" type="text" class="validate" length="1">
+                        <label for="main4">字典4</label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col s12 m12">
+                        <div class="card">
+                            <div class="card-content">
+
+                                <div class="row">
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea id="string_0" class="materialize-textarea"></textarea>
+                                                <label for="string_0">加密前(要加密的文字填在这里)</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                                <div class="row">
+                                    <form class="col s12">
+                                        <div class="row">
+                                            <div class="input-field col s12">
+                                                <textarea id="string_1" class="materialize-textarea"></textarea>
+                                                <label for="string_1">加密后(要解密的文字填在这里)</label>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-action">
+                                <div class="row center">
+                                    <a type="submit" id="download-button" onclick="encode_fun()"
+                                        class="btn waves-effect waves-light blue">加密</a>
+
+                                    <a type="submit" id="download-button" onclick="decode_fun()"
+                                        class="btn waves-effect waves-light blue">解密</a>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <br><br>
+
+            <div class="section">
+
+            </div>
+        </div>
+
+        <br><br><br><br><br><br>
+        <footer class="page-footer blue">
+            <div class="container">
+                <div class="row">
+                    <div class="col l3 s12">
+                        <h5 class="white-text">开源内容使用</h5>
+                        <ul>
+                            <li><a class="white-text" href="https://github.com/SycAlright/beast_sdk">引用的SDK</a></li>
+                        </ul>
+                        <ul>
+                            <li><a class="white-text" href="https://www.chinadlrs.com/"></a></li>
+                        </ul>
+                    </div>
+                    <div class="col l3 s12">
+                        <h5 class="white-text">站点</h5>
+                        <ul>
+                            <li><a class="white-text" href="/">RhythmStudio</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-copyright">
+                <div class="container">
+                    Made by <a class="blue-text text-lighten-3">RhythmStudio</a>
+                </div>
+            </div>
+        </footer>
+
+
+        <!--  Scripts-->
+        <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script src="/js/materialize.js"></script>
+        <script src="/js/init.js"></script>
+        <script src="/web/BeastLang/BeastLang.js"></script>
+
+</body>
+
+</html>

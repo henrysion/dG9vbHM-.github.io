@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</head>
+<body>
+
+  <div class="mdui-container">
+    <div class="mdui-tab mdui-tab-full-width" mdui-tab>
+      <a href="#example1-tab1" class="mdui-ripple">央视广播</a>
+      <a href="#example1-tab2" class="mdui-ripple">地方广播</a>
+      <a href="#example1-tab3" class="mdui-ripple">国际广播</a>
+    </div>
+    <div id="example1-tab1" class="mdui-p-a-2">
+  <ul class="mdui-list mdui-center" style="max-width: 3600px;">
+    <li class="mdui-list-item" mdui-dialog="{target: '#example-1'}">
+      <div class="mdui-list-item-avatar"><img src="img/zgzs.jpg"/></div>
+      <div class="mdui-list-item-content">中国之声</div>
+      <i class="mdui-list-item-icon mdui-icon material-icons">play_circle_outline</i>
+	  <div class="mdui-dialog" id="example-1">
+      <div class="mdui-dialog-title">中国之声</div>
+            <audio  class="mdui-center" controls="controls">
+            <source src="https://lhttp.qtfm.cn/live/386/128k.mp3" type="audio/mpeg">
+            </audio>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+      </div> 
+    </li>
+    <li class="mdui-list-item" mdui-dialog="{target: '#example-2'}">
+      <div class="mdui-list-item-avatar"><img src="img/jjzs.jpg"/></div>
+      <div class="mdui-list-item-content">经济之声</div>
+      <i class="mdui-list-item-icon mdui-icon material-icons">play_circle_outline</i>
+	  <div class="mdui-dialog" id="example-2">
+      <div class="mdui-dialog-title">经济之声</div>
+            <audio  class="mdui-center" controls="controls">
+            <source src="https://lhttp.qtfm.cn/live/387/128k.mp3" type="audio/mpeg">
+            </audio>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+      </div> 
+    </li>
+    <li class="mdui-list-item" mdui-dialog="{target: '#example-3'}">
+      <div class="mdui-list-item-avatar"><img src="img/yyzs.jpg"/></div>
+      <div class="mdui-list-item-content">音乐之声</div>
+      <i class="mdui-list-item-icon mdui-icon material-icons">play_circle_outline</i>
+	  <div class="mdui-dialog" id="example-3">
+      <div class="mdui-dialog-title">音乐之声</div>
+            <audio  class="mdui-center" controls="controls">
+            <source src="https://lhttp.qtfm.cn/live/388/128k.mp3" type="audio/mpeg">
+            </audio>
+      <div class="mdui-dialog-actions">
+        <button class="mdui-btn mdui-ripple" mdui-dialog-close>关闭</button>
+      </div>
+      </div> 
+    </li>
+  </ul>
+    </div>
+    <div id="example1-tab2" class="mdui-p-a-2">未检索"df.m3u8"，请联系站点管理员。</div>
+    <div id="example1-tab3" class="mdui-p-a-2">未检索"gj.m3u8"，请联系站点管理员。</div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+	<meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</head>
+<body>
+	<main>
+		<div class="container"><br><br>
+		 <div class="mdui-container">
+            <label class="mdui-textfield-label">输入:</label>
+                <div class="mdui-textfield">
+                       <textarea class="mdui-textfield-input" rows="4" id="msgInput" placeholder="在此处输入文本或莫尔斯电码" oninput="MorseTranslator()"></textarea>
+                </div>
+				<br>
+            <label class="mdui-textfield-label">输出:</label>
+                <div class="mdui-textfield">
+                       <textarea class="mdui-textfield-input" rows="4" id="msgOutput" ninput="MorseTranslator()"></textarea>
+                </div>
+         </div>
+	</main>
+</body>
+	<script type="text/javascript" src="./js/morse.js"></script>
+	<script type="text/javascript" src="./js/script.js"></script>
+</html>

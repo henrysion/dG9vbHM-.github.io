@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <title>SMPTOOLBOX</title>
+    <link rel="shortcut icon" href="./imgs/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/games.css">
+	<link rel="stylesheet" href="http://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/css/mdui.min.css"/>
+    <script defer="true" src="./js/jquery.js"></script>
+    <script defer="true" src="./js/element-resize-detector.min.js"></script>
+    <script defer="true" src="./js/vue.min.js"></script>
+    <script defer="true" src="./js/games-data.js"></script>
+    <script defer="true" src="./js/games.js"></script>
+	<script src="http://cdn.jsdelivr.net/npm/mdui@1.0.2/dist/js/mdui.min.js"></script>
+</head>
+
+<body id="all">
+    <div class="top-out mdui-appbar">
+        <div class="top">
+            <img class="logo" src="imgs/logos.png" alt="">
+            <h1 class="title"><span style="color:#ff4e50;">SMP</span><span style="color:#FFF;">TOOLBOX</span></h1>
+        </div>
+    </div>
+    <div class="bg">
+    </div>
+    <div class="main" id="games">
+        <div class="game-item mdui-ripple" v-for="game in games" @click="play(game)">
+            <div class="game-img" style="display: none;" :style="'background-image:url('+game.imgSrc+');display:block;'">
+            </div>
+            <div class="game-title">
+                <div class="game-tag" v-text="game.tags.join('/')"></div>
+                <h3 class="game-text" v-text="game.name"></h3>
+            </div>
+        </div>
+    </div>
+    <div v-if="isShowBox" class="cover" :class="'cover cover-show-'+isShowBox">
+        <div :class="'mdui-card game-box game-box-full-'+isFullScreen">
+            <div class="game-box-title">
+                <div class="game-box-name" v-text="currentGame.name"></div>
+                <div class="game-box-handle">
+                    <div class="game-box-full-screen mdui-ripple" @click="fullScreen()"></div>
+                    <div class="game-box-close mdui-ripple" @click="close()"></div>
+                </div>
+            </div>
+            <div class="game-box-content">
+                <div class="game-loading">
+					<div class="sk-chase">
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                        <div class="sk-chase-dot"></div>
+                    </div>
+                </div>
+                <iframe class="game-box-frame" :src="currentGame.url" frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="bottom-in">
+            Copyright© 2022 www.csdshumeipai.xyz
+        </div>
+    </div>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-116475077-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-116475077-1');
+    </script>
+</body>
+</html>

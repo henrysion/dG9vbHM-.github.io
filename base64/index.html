@@ -1,0 +1,125 @@
+<!DOCTYPE HTML>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1, minimum-scale=1, user-scalable=no">
+<script type="text/javascript" src="js/base64.js"></script>
+<!-- MDUI CSS -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/css/mdui.min.css"
+  integrity="sha384-cLRrMq39HOZdvE0j6yBojO4+1PrHfB7a9l5qLcmRm/fiWXYY+CndJPmyu5FV/9Tw"
+  crossorigin="anonymous"
+/>
+
+<!-- MDUI JavaScript -->
+<script
+  src="https://cdn.jsdelivr.net/npm/mdui@1.0.1/dist/js/mdui.min.js"
+  integrity="sha384-gCMZcshYKOGRX9r6wbDrvF+TcCCswSHFucUzUPwka+Gr+uHgjlYvkABr95TCOz3A"
+  crossorigin="anonymous"
+></script>
+<style type="text/css">
+form textarea{margin:0 auto;padding:2%;width:95%;overflow:hidden;}
+form p{padding-top:1%;text-align:center;}
+p{line-height:25px;}
+</style>
+</head>
+<body>
+<body class="mdui-theme-primary-indigo mdui-theme-accent-pink">
+<div>
+<form onsubmit="return false;"class="">
+  <div class="mdui-container">
+    <div class="mdui-tab mdui-tab-full-width" mdui-tab>
+      <a href="#example1-tab1" class="mdui-ripple">加密</a>
+      <a href="#example1-tab2" class="mdui-ripple">解密</a>
+    </div>
+    <div id="example1-tab1" class="mdui-p-a-2">
+				<div class="">
+					<div class="">
+						<div class="mdui-textfield">
+							<textarea name="code" placeholder="这里输入您要加密的字符" class="mdui-textfield-input" rows="4" id="code1"></textarea>
+						</div>
+					</div>
+					<div class="">
+						<div class=""><br>
+							<button type="button" id="encode" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" lay-submit lay-filter="sub">加密</button>
+						</div>
+					</div>
+					<div class="">
+						<div class="mdui-textfield">
+							<textarea name="code1-1" placeholder="加密后的字符" class="mdui-textfield-input" rows="4" id="code1-1"></textarea>
+						</div>
+					</div>
+				</div>
+    </div>
+    <div id="example1-tab2" class="mdui-p-a-2">
+				<div class="">
+					<div class="">
+						<div class="mdui-textfield">
+							<textarea name="code2" placeholder="这里输入您Base64加密过的字符" class="mdui-textfield-input" rows="4" id="code2"></textarea>
+						</div>
+					</div><br />
+					<div class="">
+						<div class="">
+							<button type="button" id="decode" class="mdui-btn mdui-btn-raised mdui-ripple mdui-color-theme-accent" lay-submit lay-filter="sub">解密</button>
+						</div><br>
+					</div>
+					<div class="">
+						<div class="">
+							<textarea name="code2-2" placeholder="解密还原后的字符" class="mdui-textfield-input" rows="4" id="code2-2"></textarea>
+						</div>
+					</div>
+				</div>
+	</div>
+
+  </div>	
+</form>
+</div>
+<script type="text/javascript" src="http://lib.baomitu.com/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="https://www.qvdv.com/public/layui/layui.js"></script>
+<script type="text/javascript">
+	layui.config({
+		version: 20180212
+		,debug: false
+		,base: ''
+	});
+	layui.use('layer', function(){
+		var layer = layui.layer;
+		$("#menuIco .m").click(function() {
+			$(".bg,#menuIcoL").toggle(100);
+			$("#menuIco .m").toggle(0);
+		});
+	});
+	
+/*导航高亮*/
+                var nav = document.getElementById("menu_nav");
+                var links = nav.getElementsByTagName("li");
+                var lilen = nav.getElementsByTagName("a"); //判断地址
+                var currenturl = document.location.href;
+                var last = 0;
+                for(var i=0;i<links.length;i++)
+                {
+                var linkurl =  lilen[i].getAttribute("href");
+                if(currenturl.indexOf(linkurl)!=-1)
+                {
+                last = i;
+                }
+              }
+         links[last].className = "current";  //高亮代码样式
+</script>
+<script type="text/javascript"> 
+	$(document).ready(function(){
+		layui.use(['form','element'], function(){
+			var form = layui.form;
+			var element = layui.element;
+			$("#encode").click(function(){
+				$("#code1-1").val(encode64($("#code1").val()));
+			});
+			$("#decode").click(function(){
+				$("#code2-2").val(decode64($("#code2").val()));
+			});
+		})
+	})
+</script>
+</body>
+</html>
