@@ -46,4 +46,10 @@ var gamesData = [ {
 	"name": "网页代理",
 	"tags": ["网络工具"],
 	"id": "d1eeb899810e4c359805ad860e405847"
+},{
+	"url": "https://toolbox.csdshumeipai.xyz/chatgpt/",
+	"imgSrc": "https://toolbox.csdshumeipai.xyz/imgs/chatgpt.png",
+	"name": "ChatGPT",
+	"tags": ["人工智能"],
+	"id": "d1eeb899810e4c359805ad860e405847"
 }]
